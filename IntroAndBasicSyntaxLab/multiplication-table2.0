@@ -1,0 +1,14 @@
+<?php
+
+$n = intval(readline());
+$m = intval(readline());
+
+if($m > 10){
+    echo "$n X $m = ".$n*$m;
+    return;
+}
+
+for ($index = $m; $index <= 10; $index++) {
+    echo "$n X $index = ".$n*$index."\n";
+}
+
