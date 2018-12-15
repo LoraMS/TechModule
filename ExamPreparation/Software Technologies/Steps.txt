@@ -1,0 +1,15 @@
+Start XAMPP Apache and MySQL server to listen;
+
+1. Start terminal and write "composer install";
+2. Create database with "php bin/console doctrine:database:create --if-not-exists";
+3. Create Entity with "php bin/console doctrine:generate:entity";
+   - name: AppBundle:SomeName
+   - enter (notations)
+   - fields (enter or choose type)
+   - enter
+4. Create Form with "php bin/console doctrine:generate:form AppBundle:SomeName";
+   - delete function getBlockPrefix()
+   - add TextType::class or NumberType::class to the fields
+5. Import entities and update database with "php bin/console doctrine:schema:update --force";
+6. Confurate IDE and start from it or from terminal with "php bin/console server:run".
+
